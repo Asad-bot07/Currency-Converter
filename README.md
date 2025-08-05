@@ -63,5 +63,5 @@ https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/inr.
 ## 👨‍💻 Author
 
 **Asad Hussain**  
-[GitHub](https://github.com/Asad-bot07) • [Portfolio](https://asad-bot07.github.io)
+[LinkedIn](in/asad-hussain-765502319) • [Portfolio](https://asad-hussaindev.vercel.app/)
 
