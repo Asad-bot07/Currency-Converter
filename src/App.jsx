@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Input } from "./Components";
 import useCurrency from "./hooks/UseCurrencyInfo";
 
+
 function App() {
   const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("inr");
@@ -19,7 +20,7 @@ function App() {
     setAmount(convertedAmount);
     setConvertedAmount(amount);
     setToastMessage(
-      `Currency swapped to ${to.toUpperCase()} → ${from.toUpperCase()}`
+      `Currency swapped: ${to.toUpperCase()} → ${from.toUpperCase()}`
     );
     setShowToast(true);
   };
@@ -60,8 +61,8 @@ function App() {
                 amount={amount}
                 currencyOptions={diffCurr}
                 selectCurrency={from}
-                onCurrencyChange={(e) => setFrom(e.target.value)}
-                onAmountChange={(e) => setAmount(Number(e))}
+                onCurrencyChange={(value) => setFrom(value)}
+                onAmountChange={(value) => setAmount(value)}
               />
             </div>
 
@@ -81,7 +82,7 @@ function App() {
                 amount={convertedAmount}
                 currencyOptions={diffCurr}
                 selectCurrency={to}
-                onCurrencyChange={(e) => setTo(e.target.value)}
+                onCurrencyChange={(value) => setTo(value)}
                 amountDisable
               />
             </div>

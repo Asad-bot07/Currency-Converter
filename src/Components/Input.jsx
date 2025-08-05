@@ -2,7 +2,7 @@ import { useId } from "react";
 
 function Input({
   label,
-  amount,
+  amount = "",
   onAmountChange,
   onCurrencyChange,
   currencyOptions = [],
@@ -31,9 +31,10 @@ function Input({
           placeholder="Enter amount"
           disabled={amountDisable}
           value={amount}
-          onChange={(e) =>
-            onAmountChange && onAmountChange(Number(e.target.value))
-          }
+          onChange={(e) => {
+            const value = e.target.value;
+            onAmountChange && onAmountChange(value === "" ? "" : Number(value));
+          }}
         />
       </div>
 
@@ -43,7 +44,11 @@ function Input({
           className="rounded-md px-3 py-2 bg-[#2c2c40] text-white outline-none shadow-sm hover:bg-[#3a3a55] focus:ring-2 focus:ring-[#6C63FF] transition-all"
           disabled={currencyDisable}
           value={selectCurrency}
-          onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
+          onChange={(e) => {
+            if (onCurrencyChange) {
+              onCurrencyChange(e.target.value);
+            }
+          }}
         >
           {currencyOptions.map((curr) => (
             <option key={curr} value={curr}>
