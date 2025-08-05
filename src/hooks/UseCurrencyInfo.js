@@ -7,7 +7,7 @@ function useCurrency(base) {
     const url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${base}.json`;
     fetch(url)
       .then((res) => res.json())
-      .then((res) => setData(res[base] || {})) // ensure fallback
+      .then((res) => setData(res[base] || {})) 
       .catch((err) => console.error("Currency fetch failed:", err));
   }, [base]);
 
