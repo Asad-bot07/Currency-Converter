@@ -4,6 +4,11 @@ This is a responsive and animated currency converter built with **React**, **Tai
 
 ---
 
+## Live Preview
+[Visit here](https://asad-bot07.github.io/Currency-Converter/)
+
+---
+
 ## 📦 Built With
 - React
 - Tailwind CSS
