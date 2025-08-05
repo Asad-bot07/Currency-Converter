@@ -1,4 +1,3 @@
-// src/hooks/UseCurrencyInfo.js
 import { useEffect, useState } from "react";
 
 function useCurrency(base) {
